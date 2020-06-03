@@ -3,8 +3,8 @@ import App from './App.vue'
 import router from './router'
 import AV from 'leancloud-storage'
 
-const APP_ID = '4On8m21OJDdGG9Cg8I2GlLwP-gzGzoHsz'
-const APP_KEY = '9qEsUxAXstOfjT9rYIxbxvxT'
+const APP_ID = 'UVuCTCKfeU1kCCAi85Qe2xyS-gzGzoHsz'
+const APP_KEY = 'gobTkbGmIhAr7YeJdqox5gBN'
 AV.init({
   appId: APP_ID,
   appKey: APP_KEY
