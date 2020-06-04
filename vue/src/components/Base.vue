@@ -15,7 +15,7 @@
         <span @click="addPeople(anime)">添加人物</span>
       </li>
     </ul>
-    <div class="button" @click="addAnime">添加动漫</div>
+    <div class="button" @click="saveAnime">添加动漫</div>
   </div>
 </template>
 
@@ -43,7 +43,8 @@ export default {
         alert(error);
       }
     },
-    async addAnime() {
+    // 添加数据
+    async saveAnime() {
       const Anime = AV.Object.extend("Anime");
       const anime = new Anime();
       const title = prompt("动漫名字？", "");
@@ -63,8 +64,6 @@ export default {
       const age = prompt("几岁看的？", "");
       anime.set("title", title);
       anime.set("age", age);
-
-  
       try {
         await anime.save();
         this.getAnime();
@@ -99,7 +98,6 @@ export default {
         await anime.save();
         this.getAnime();
       } catch (error) {
-        console.log(error, 1);
         alert(error);
       }
     }
