@@ -48,7 +48,7 @@ export default {
       const Anime = AV.Object.extend('Anime')
       const anime = new Anime()
       const title = prompt('动漫名字？', '')
-      const age = prompt('儿时年龄？', '')
+      const age = prompt('观看年龄？', '')
       anime.set('title', title)
       anime.set('age', age)
       await anime.save()
